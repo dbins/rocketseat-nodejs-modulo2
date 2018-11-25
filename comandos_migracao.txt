@@ -1,0 +1,16 @@
+npx sequelize init
+npx sequelize migration:create --name=create-users
+npx sequelize db:migrate
+
+npx sequelize migration:create --name=create-appointments
+npx sequelize db:migrate
+
+
+abrir docker toolbox primeiro
+docker run --name database -p 5432:5432 -d -t kartoza/postgis  (usuario e senha padrao é docker)
+docker ps
+
+
+PARA CRIAR O .GITIGNORE
+https://github.com/github/gitignore
+https://github.com/github/gitignore/blob/master/Node.gitignore

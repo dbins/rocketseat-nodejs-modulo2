@@ -1,0 +1,31 @@
+{% extends "_layouts/default.njk" %}
+
+{% block body%}
+
+    <table border="1" width="700">
+        <thead>
+            <tr>
+                <th>Nome do cliente</th>
+                <th>Data do Agendamento</th>
+                <th>Horario</th>
+            </tr>
+        </thead>
+        <tbody>
+           {% if resultados.length %}
+            
+            {% for item in resultados%}
+            <tr>
+                <td>{{item.nome}} </td>
+                <td>{{item.data}}</td>
+                <td>{{item.horario}}</td>
+            </tr>
+            {% endfor %}
+            {% else %}    
+            <tr>
+                <td colspan="3" align="center">Não existem informações</td>
+            </tr>
+            {% endif %}
+        </tbody>
+    </table>
+
+{% endblock%}
